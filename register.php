@@ -72,33 +72,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <style>
     <?php include 'public\css\registerstyle.css';
     ?>
-
-    /* Add alert styles */
-    .alert-success {
-        background-color: #d4edda;
-        color: #155724;
-        padding: 1rem;
-        border-radius: 4px;
-        margin-bottom: 1rem;
-        position: relative;
-    }
-
-    .alert-danger {
-        background-color: #f8d7da;
-        color: #721c24;
-        padding: 1rem;
-        border-radius: 4px;
-        margin-bottom: 1rem;
-        position: relative;
-    }
-
-    .alert-dismissible .close {
-        position: absolute;
-        top: 0.5rem;
-        right: 1rem;
-        color: inherit;
-        cursor: pointer;
-    }
     </style>
 </head>
 
