@@ -1,0 +1,414 @@
+ /* Existing slider-specific styles */
+ .slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: transform 1s ease-in-out;
+}
+
+.slider-image.active {
+    transform: scale(1);
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-container:hover .slider-image {
+    transform: scale(1.15);
+}
+
+.absolute.inset-0 {
+    opacity: 0.8;
+}
+
+.slider-container:hover .absolute.inset-0 {
+    opacity: 1;
+}
+
+h2 {
+    transform: translateY(20px);
+}
+
+.slider-container.active h2 {
+    transform: translateY(0);
+}
+
+/* Converted Tailwind classes to CSS */
+body {
+    background: linear-gradient(to bottom, #E6FFFA, #FFFFFF, #F0FFF4);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.h-\[60vh\] {
+    height: 60vh;
+}
+
+.bg-gray-200 {
+    background-color: #E5E7EB;
+}
+
+.flex {
+    display: flex;
+}
+
+.transition-transform {
+    transition: transform 0.7s ease-in-out;
+}
+
+.duration-700 {
+    transition-duration: 700ms;
+}
+
+.ease-in-out {
+    transition-timing-function: ease-in-out;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.min-w-full {
+    min-width: 100%;
+}
+
+.bg-gradient-to-t {
+    background: linear-gradient(to top, rgba(17, 24, 39, 0.7), transparent);
+}
+
+.from-gray-900\/70 {
+    background: linear-gradient(to top, rgba(17, 24, 39, 0.7), transparent);
+}
+
+.to-transparent {
+    background: linear-gradient(to top, rgba(17, 24, 39, 0.7), transparent);
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.transition-opacity {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.duration-500 {
+    transition-duration: 500ms;
+}
+
+.text-white {
+    color: #FFFFFF;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    /* 30px */
+}
+
+.md\:text-4xl {
+    font-size: 2.25rem;
+    /* 36px, applies on medium screens and up */
+}
+
+@media (min-width: 768px) {
+    .md\:text-4xl {
+        font-size: 2.25rem;
+    }
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.drop-shadow-lg {
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+}
+
+.transform {
+    transform: translateY(20px);
+    /* Matches h2 default state */
+}
+
+.transition-transform {
+    transition: transform 0.5s ease-in-out;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.left-6 {
+    left: 1.5rem;
+    /* 24px */
+}
+
+.right-6 {
+    right: 1.5rem;
+    /* 24px */
+}
+
+.top-1\/2 {
+    top: 50%;
+}
+
+.-translate-y-1\/2 {
+    transform: translateY(-50%);
+}
+
+.bg-teal-600 {
+    background-color: #319795;
+}
+
+.p-3 {
+    padding: 0.75rem;
+    /* 12px */
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.hover\:bg-teal-700:hover {
+    background-color: #2C7A7B;
+}
+
+.transition-all {
+    transition: all 0.2s ease-in-out;
+}
+
+.duration-200 {
+    transition-duration: 200ms;
+}
+
+.hover\:scale-110:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    /* 24px */
+    padding-right: 1.5rem;
+    /* 24px */
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    /* 24px */
+    padding-right: 1.5rem;
+    /* 24px */
+}
+
+.py-16 {
+    padding-top: 4rem;
+    /* 64px */
+    padding-bottom: 4rem;
+    /* 64px */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+    /* 36px */
+}
+
+.md\:text-5xl {
+    font-size: 3rem;
+    /* 48px, applies on medium screens and up */
+}
+
+@media (min-width: 768px) {
+    .md\:text-5xl {
+        font-size: 3rem;
+    }
+}
+
+.text-teal-800 {
+    color: #2C7A7B;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+.text-lg {
+    font-size: 1.125rem;
+    /* 18px */
+}
+
+.md\:text-xl {
+    font-size: 1.25rem;
+    /* 20px, applies on medium screens and up */
+}
+
+@media (min-width: 768px) {
+    .md\:text-xl {
+        font-size: 1.25rem;
+    }
+}
+
+.text-gray-600 {
+    color: #4B5563;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+    /* 32px */
+}
+
+.max-w-3xl {
+    max-width: 48rem;
+    /* 768px */
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.px-8 {
+    padding-left: 2rem;
+    /* 32px */
+    padding-right: 2rem;
+    /* 32px */
+}
+
+.py-3 {
+    padding-top: 0.75rem;
+    /* 12px */
+    padding-bottom: 0.75rem;
+    /* 12px */
+}
+
+.rounded-md {
+    border-radius: 0.375rem;
+    /* 6px */
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.hover\:bg-teal-700:hover {
+    background-color: #2C7A7B;
+}
+
+.transition-colors {
+    transition: background-color 0.2s ease-in-out;
+}
+
+.bg-gradient-to-r {
+    background: linear-gradient(to right, #E6FFFA, #F0FFF4);
+}
+
+.from-teal-100 {
+    background: linear-gradient(to right, #E6FFFA, #F0FFF4);
+}
+
+.to-green-100 {
+    background: linear-gradient(to right, #E6FFFA, #F0FFF4);
+}
+
+.py-12 {
+    padding-top: 3rem;
+    /* 48px */
+    padding-bottom: 3rem;
+    /* 48px */
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+    .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.gap-8 {
+    gap: 2rem;
+    /* 32px */
+}
+
+.p-6 {
+    padding: 1.5rem;
+    /* 24px */
+}
+
+.bg-white {
+    background-color: #FFFFFF;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+    /* 8px */
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+    /* 36px */
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.text-teal-600 {
+    color: #319795;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+    /* 8px */
+}
+
+.mb-12 {
+    margin-bottom: 3rem;
+    /* 48px */
+}
+
+.text-xl {
+    font-size: 1.25rem;
+    /* 20px */
+}
+
+.text-gray-800 {
+    color: #1F2937;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    /* 30px */
+}

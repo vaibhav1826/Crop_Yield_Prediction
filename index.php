@@ -9,55 +9,12 @@
     <?php include 'partials/head.php'; ?>
     <!-- Custom styles for the slider images and other enhancements -->
     <style>
-    .slider-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* Ensures images fill the space */
-        transform: scale(1.1);
-        /* Slight zoom for depth */
-        transition: transform 1s ease-in-out;
-        /* Smooth zoom effect */
-    }
-
-    .slider-image.active {
-        transform: scale(1);
-        /* Reset zoom when active */
-    }
-
-    .slider-container {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .slider-container:hover .slider-image {
-        transform: scale(1.15);
-        /* Subtle zoom on hover */
-    }
-
-    .absolute.inset-0 {
-        opacity: 0.8;
-        /* Default overlay opacity */
-    }
-
-    .slider-container:hover .absolute.inset-0 {
-        opacity: 1;
-        /* Full overlay visibility on hover */
-    }
-
-    h2 {
-        transform: translateY(20px);
-        /* Start slightly below */
-    }
-
-    .slider-container.active h2 {
-        transform: translateY(0);
-        /* Slide up when active */
-    }
+    <?php include 'public\css\indexstyle.css';
+    ?>
     </style>
 </head>
 
-<body class="bg-gradient-to-b from-teal-50 via-white to-green-50 min-h-screen flex flex-col font-sans">
+<body class="min-h-screen flex flex-col font-sans">
     <!-- Include the navigation bar partial -->
     <?php include 'partials/nav.php'; ?>
 
