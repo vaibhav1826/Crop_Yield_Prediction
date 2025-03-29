@@ -1,0 +1,169 @@
+/* contactstyle.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7fafc;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.bg-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: slideBackground 20s infinite ease-in-out;
+    z-index: -1;
+    filter: brightness(0.6);
+}
+
+@keyframes slideBackground {
+    0%, 100% { background-image: url('https://wallpapercave.com/wp/wp3115847.jpg'); }
+    33% { background-image: url('https://images.pexels.com/photos/6216870/pexels-photo-6216870.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'); }
+    66% { background-image: url('https://wallpaperaccess.com/full/453367.jpg'); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.scale-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scale-hover:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-submit {
+    background: linear-gradient(to right, #0d9488, #14b8a6); /* teal-700 to teal-500 */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.btn-submit::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(to right, #0d9488, #14b8a6);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(13, 148, 136, 0.4);
+}
+
+.btn-submit:hover::after {
+    width: 200%;
+    height: 200%;
+}
+
+.input-focus {
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.input-focus:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+.section-bg {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-form,
+.contact-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.icon-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.icon-box:hover {
+    background: linear-gradient(to right, #0d9488, #14b8a6);
+    color: white;
+}
+
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 150px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(46, 125, 50, 0.1);
+    color: #1d4e50;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: linear-gradient(to right, #0d9488, #14b8a6);
+    color: white;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .contact-container { flex-direction: column; }
+    .map-container { height: 120px; }
+}

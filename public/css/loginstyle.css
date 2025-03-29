@@ -1,0 +1,271 @@
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('public/images/loginimage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.login-form {
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.input-focus {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.input-focus:focus {
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2);
+    outline: none;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #14b8a6, #0d9488);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(20, 184, 166, 0.4);
+}
+
+.forgot-link {
+    transition: all 0.3s ease;
+}
+
+.forgot-link:hover {
+    color: #0d9488;
+}
+
+footer {
+    background: linear-gradient(135deg, #0f766e, #134e4a);
+}
+
+/* Custom CSS replacements for Tailwind */
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    /* Equivalent to container */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    /* Equivalent to px-6 */
+    padding-right: 24px;
+    padding-top: 64px;
+    /* Equivalent to py-16 */
+    padding-bottom: 64px;
+    flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        padding-top: 96px;
+        /* Equivalent to md:py-24 */
+        padding-bottom: 96px;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-12 {
+    margin-bottom: 48px;
+}
+
+.text-4xl {
+    font-size: 36px;
+}
+
+.md-text-6xl {
+    font-size: 36px;
+}
+
+@media (min-width: 768px) {
+    .md-text-6xl {
+        font-size: 60px;
+    }
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-white {
+    color: white;
+}
+
+.mb-4 {
+    margin-bottom: 16px;
+}
+
+.text-xl {
+    font-size: 20px;
+}
+
+.md-text-2xl {
+    font-size: 20px;
+}
+
+@media (min-width: 768px) {
+    .md-text-2xl {
+        font-size: 24px;
+    }
+}
+
+.text-white-90 {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.max-w-2xl {
+    max-width: 672px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.max-w-md {
+    max-width: 448px;
+}
+
+.text-3xl {
+    font-size: 30px;
+}
+
+.md-text-4xl {
+    font-size: 30px;
+}
+
+@media (min-width: 768px) {
+    .md-text-4xl {
+        font-size: 36px;
+    }
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.text-teal-800 {
+    color: #0f766e;
+}
+
+.mb-8 {
+    margin-bottom: 32px;
+}
+
+.space-y-6>*+* {
+    margin-top: 24px;
+}
+ 
+.block {
+    display: block;
+}
+
+.text-gray-800 {
+    color: #1f2937;
+}
+
+.mb-2 {
+    margin-bottom: 8px;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.mr-2 {
+    margin-right: 8px;
+}
+
+.accent-teal-600 {
+    accent-color: #0d9488;
+}
+
+.text-sm {
+    font-size: 14px;
+}
+
+.text-gray-700 {
+    color: #374151;
+}
+
+.text-teal-600 {
+    color: #0d9488;
+}
+
+.hover-underline:hover {
+    text-decoration: underline;
+}
+
+.mt-6 {
+    margin-top: 24px;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.animate-fade-in-delay {
+    animation: fadeIn 0.8s ease-out 0.2s backwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
