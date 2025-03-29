@@ -1,3 +1,21 @@
+<?php
+session_start(); // Start the session
+
+// Check if the user is logged in
+$loggedin = false;
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+    $loggedin = true;
+} else {
+    $loggedin = false;
+}
+
+// If not logged in, redirect to login with a message
+if (!$loggedin) {
+    header("Location: login.php?alert=login_required");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

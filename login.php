@@ -1,3 +1,41 @@
+<?php
+session_start(); // Start the session at the top
+
+$showalert = false; // For username not found
+$wrongPassword = false; // For incorrect password
+$login = false;
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    include 'partials\db_connect.php';
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    // Use prepared statement to prevent SQL injection
+    $sql = "SELECT * FROM USERS WHERE username = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    $num = mysqli_num_rows($result);
+
+    if($num == 1){
+        while($row = mysqli_fetch_assoc($result)){
+            if(password_verify($password, $row['password'])){
+                $login = true;
+                $_SESSION['loggedin'] = true;
+                $_SESSION['username'] = $username;
+            } else {
+                $wrongPassword = true; // Password is incorrect
+            }
+        }
+    } else {
+        $showalert = true; // Username not found
+    }
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +48,33 @@
     <style>
     <?php include 'public\css\loginstyle.css';
     ?>
+
+    /* Add alert styles */
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        padding: 1rem;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 1rem;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    .alert-dismissible .close {
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        color: inherit;
+        cursor: pointer;
+    }
     </style>
 </head>
 
@@ -17,6 +82,36 @@
     <?php include 'partials/nav.php'; ?>
 
     <section class="main-container">
+        <!-- Alerts at the top -->
+        <?php
+        // Check for redirect alert from predict.php
+        if(isset($_GET['alert']) && $_GET['alert'] == 'login_required') {
+            echo '<div class="alert-danger alert-dismissible">
+                    You must log in to access the Predict page!
+                    <span class="close" onclick="this.parentElement.style.display=\'none\'">×</span>
+                  </div>';
+        }
+        if($login){
+            echo '<div class="alert-success alert-dismissible">
+                    Successfully logged in as ' . htmlspecialchars($username) . '!
+                    <span class="close" onclick="this.parentElement.style.display=\'none\'">×</span>
+                  </div>';
+            echo '<script>setTimeout(() => { window.location.href = "index.php"; }, 2000);</script>';
+        }
+        if($wrongPassword){
+            echo '<div class="alert-danger alert-dismissible">
+                    Incorrect password!
+                    <span class="close" onclick="this.parentElement.style.display=\'none\'">×</span>
+                  </div>';
+        }
+        if($showalert){
+            echo '<div class="alert-danger alert-dismissible">
+                    Username not found!
+                    <span class="close" onclick="this.parentElement.style.display=\'none\'">×</span>
+                  </div>';
+        }
+        ?>
+
         <div class="text-center mb-12">
             <h1 class="text-4xl md-text-6xl font-bold text-white mb-4 animate-fade-in">Welcome Back</h1>
             <p class="text-xl md-text-2xl text-white-90 max-w-2xl mx-auto animate-fade-in-delay">Access your Crop Yield
@@ -26,15 +121,16 @@
         <div class="login-container max-w-md mx-auto">
             <div class="login-form">
                 <h2 class="text-3xl md-text-4xl font-semibold text-teal-800 mb-8 text-center">Sign In</h2>
-                <form action="#" method="POST" class="space-y-6">
+                <form action="login.php" method="POST" class="space-y-6">
                     <div>
-                        <label class="block text-gray-800 font-medium mb-2" for="email">Email Address</label>
-                        <input type="email" id="email" placeholder="Enter your email" class="input-focus" required>
+                        <label class="block text-gray-800 font-medium mb-2" for="username">Username </label>
+                        <input type="username" id="username" placeholder="Enter your username" class="input-focus"
+                            name="username" required>
                     </div>
                     <div>
                         <label class="block text-gray-800 font-medium mb-2" for="password">Password</label>
                         <input type="password" id="password" placeholder="Enter your password" class="input-focus"
-                            required>
+                            name="password" required>
                     </div>
                     <div class="flex items-center justify-between">
                         <label class="flex items-center text-gray-700">
@@ -55,7 +151,6 @@
     </section>
 
     <?php include 'partials/footer.php'; ?>
-
 </body>
 
 </html>
