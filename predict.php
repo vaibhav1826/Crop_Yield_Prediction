@@ -47,7 +47,7 @@ if (!$loggedin) {
             <h1 class="hero-title">PredictYield</h1>
             <p class="hero-subtitle">Empowering Farmers with Accurate Crop Yield Predictions Using Real-Time Weather
                 Data</p>
-            <a href="#predict" class="cta-btn">Try Now</a>
+            <a href="predictform.php" class="cta-btn">Try Now</a>
         </div>
     </section>
 
@@ -202,7 +202,7 @@ if (!$loggedin) {
             <h2 class="cta-title">Ready to Transform Your Farm?</h2>
             <p class="cta-text">Join thousands of farmers making smarter decisions with our data-driven insights and
                 advanced yield predictions.</p>
-            <a href="#image-gallery" class="cta-btn-large">Start Predicting Now</a>
+            <a href="predictform.php" class="cta-btn-large">Start Predicting Now</a>
         </div>
     </section>
 
