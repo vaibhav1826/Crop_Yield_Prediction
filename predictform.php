@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <?php include 'partials/nav.php'; ?>
     <div class="container">
-        <h1>Integrated Crop & Weather Prediction System</h1>
+        <h1 id="special">Integrated Crop & Weather Prediction System</h1>
 
         <div id="alert-container"></div>
 

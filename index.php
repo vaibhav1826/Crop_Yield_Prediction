@@ -11,145 +11,229 @@ session_start();
     <title>Crop Yield Prediction Portal</title>
     <!-- Include the head partial -->
     <?php include 'partials/head.php'; ?>
-    <!-- Custom styles for the slider images and other enhancements -->
+    <!-- Custom styles (No navbar or footer CSS) -->
     <style>
     <?php include 'public\css\indexstyle.css';
     ?>
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col font-sans">
-    <!-- Include the navigation bar partial -->
+<body>
+    <!-- Navigation (No CSS applied here) -->
     <?php include 'partials/nav.php'; ?>
 
-    <!-- Enhanced Static Image Slider with <img> tags -->
-    <section class="relative h-[60vh] overflow-hidden bg-gray-200">
-        <div id="slider" class="flex transition-transform duration-700 ease-in-out h-full">
-            <!-- Slide 1 -->
-            <div class="min-w-full h-full relative slider-container">
-                <img src="public/images/slider1.jpg" alt="Precision Farming Solutions"
-                    class="slider-image transition-transform duration-1000 ease-in-out">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex items-center justify-center transition-opacity duration-500">
-                    <h2
-                        class="text-white text-3xl md:text-4xl font-bold drop-shadow-lg transform transition-transform duration-500">
-                        Precision Farming Solutions
-                    </h2>
+    <!-- Enhanced Slider -->
+    <section class="slider-container">
+        <div id="slider" class="slider">
+            <div class="slide">
+                <img src="public/images/slider1.jpg" alt="Precision Farming Solutions" class="slider-image">
+                <div class="overlay">
+                    <h2>Precision Farming Solutions</h2>
+                    <p>Boost efficiency with data-driven insights</p>
                 </div>
             </div>
-            <!-- Slide 2 -->
-            <div class="min-w-full h-full relative slider-container">
-                <img src="public/images/slider2.jpg" alt="Optimize Your Yield"
-                    class="slider-image transition-transform duration-1000 ease-in-out">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex items-center justify-center transition-opacity duration-500">
-                    <h2
-                        class="text-white text-3xl md:text-4xl font-bold drop-shadow-lg transform transition-transform duration-500">
-                        Optimize Your Yield
-                    </h2>
+            <div class="slide">
+                <img src="public/images/slider2.jpg" alt="Optimize Your Yield" class="slider-image">
+                <div class="overlay">
+                    <h2>Optimize Your Yield</h2>
+                    <p>Maximize productivity with smart predictions</p>
                 </div>
             </div>
-            <!-- Slide 3 -->
-            <div class="min-w-full h-full relative slider-container">
-                <img src="public/images/slider3.jpg" alt="Sustainable Agriculture"
-                    class="slider-image transition-transform duration-1000 ease-in-out">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex items-center justify-center transition-opacity duration-500">
-                    <h2
-                        class="text-white text-3xl md:text-4xl font-bold drop-shadow-lg transform transition-transform duration-500">
-                        Sustainable Agriculture
-                    </h2>
+            <div class="slide">
+                <img src="public/images/slider3.jpg" alt="Sustainable Agriculture" class="slider-image">
+                <div class="overlay">
+                    <h2>Sustainable Agriculture</h2>
+                    <p>Farm smarter for a greener future</p>
                 </div>
             </div>
         </div>
-        <button id="prev"
-            class="absolute left-6 top-1/2 transform -translate-y-1/2 bg-teal-600 text-white p-3 rounded-full hover:bg-teal-700 transition-all duration-200 hover:scale-110">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button id="next"
-            class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-teal-600 text-white p-3 rounded-full hover:bg-teal-700 transition-all duration-200 hover:scale-110">
-            <i class="fas fa-chevron-right"></i>
-        </button>
+        <button id="prev" class="slider-btn"><i class="fas fa-chevron-left"></i></button>
+        <button id="next" class="slider-btn"><i class="fas fa-chevron-right"></i></button>
+        <div class="slider-dots" id="dots"></div>
     </section>
 
     <!-- Hero Section -->
-    <section class="container mx-auto px-6 py-16 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold text-teal-800 mb-6">Data-Driven Farming for a Better Future</h1>
-        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Harness advanced analytics to predict crop
-            yields, improve efficiency, and cultivate sustainably with confidence.</p>
-        <a href="#"
-            class="inline-block bg-teal-600 text-white px-8 py-3 rounded-md font-medium hover:bg-teal-700 transition-colors duration-200">Explore
-            Now</a>
+    <section class="hero container">
+        <h1>Data-Driven Farming for a Better Future</h1>
+        <p>Harness advanced analytics to predict crop yields, improve efficiency, and cultivate sustainably.</p>
+        <div class="cta-buttons">
+            <a href="#">Explore Now</a>
+        </div>
     </section>
 
     <!-- Stats Section -->
-    <section class="bg-gradient-to-r from-teal-100 to-green-100 py-12">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div class="p-6 bg-white rounded-lg shadow-md">
-                <h3 class="text-4xl font-semibold text-teal-600 mb-2">250,000+</h3>
-                <p class="text-lg text-gray-600">Visitors to Our Platform</p>
+    <section class="stats">
+        <div class="stats-grid container">
+            <div class="stat-item">
+                <h3 data-count="250000">0+</h3>
+                <p>Visitors to Our Platform</p>
             </div>
-            <div class="p-6 bg-white rounded-lg shadow-md">
-                <h3 class="text-4xl font-semibold text-teal-600 mb-2">50,000+</h3>
-                <p class="text-lg text-gray-600">Current Active Users</p>
+            <div class="stat-item">
+                <h3 data-count="50000">0+</h3>
+                <p>Current Active Users</p>
             </div>
-            <div class="p-6 bg-white rounded-lg shadow-md">
-                <h3 class="text-4xl font-semibold text-teal-600 mb-2">2.5M+ Acres</h3>
-                <p class="text-lg text-gray-600">Cultivation Area Benefited</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="container mx-auto px-6 py-16">
-        <h2 class="text-3xl font-semibold text-teal-800 text-center mb-12">Our Core Strengths</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="p-6 bg-white rounded-lg shadow-md text-center">
-                <i class="fas fa-chart-line text-teal-600 text-3xl mb-4"></i>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Predictive Analytics</h3>
-                <p class="text-gray-600">Accurate yield forecasts powered by data.</p>
-            </div>
-            <div class="p-6 bg-white rounded-lg shadow-md text-center">
-                <i class="fas fa-leaf text-teal-600 text-3xl mb-4"></i>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Sustainability Focus</h3>
-                <p class="text-gray-600">Reduce waste and enhance resource use.</p>
-            </div>
-            <div class="p-6 bg-white rounded-lg shadow-md text-center">
-                <i class="fas fa-users text-teal-600 text-3xl mb-4"></i>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Farmer-Centric</h3>
-                <p class="text-gray-600">Trusted tools for agricultural success.</p>
+            <div class="stat-item">
+                <h3 data-count="2500000">0+ Acres</h3>
+                <p>Cultivation Area Benefited</p>
             </div>
         </div>
     </section>
 
-    <!-- Include the footer partial -->
+    <!-- Enhanced Features Section with Improved Images -->
+    <section class="features container">
+        <h2>Our Core Strengths</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="image-wrapper">
+                    <img src="public/images/photo3.jpg" alt="Predictive Analytics">
+                </div>
+                <h3>Predictive Analytics</h3>
+                <p>Accurate yield forecasts powered by data.</p>
+            </div>
+            <div class="feature-item">
+                <div class="image-wrapper">
+                    <img src="public/images/photo2.jpg" alt="Sustainability Focus">
+                </div>
+                <h3>Sustainability Focus</h3>
+                <p>Reduce waste and enhance resource use.</p>
+            </div>
+            <div class="feature-item">
+                <div class="image-wrapper">
+                    <img src="public/images/photo1.jpg" alt="Farmer-Centric">
+                </div>
+                <h3>Farmer-Centric</h3>
+                <p>Trusted tools for agricultural success.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="gallery container">
+        <h2>Explore Farming in Action</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="public/images/predictbackground.jpg" alt="Wheat Field">
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/cornfield.jpg" alt="Corn Harvest">
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/suistanable.jpg" alt="Sustainable Farming">
+            </div>
+            <div class="gallery-item">
+                <img src="public/images/farmer.jpg" alt="Farmer at Work">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonials container">
+        <h2>What Farmers Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-item">
+                <img src="public/images/farmer1.jpg" alt="Farmer Avatar">
+                <div>
+                    <p>"This tool transformed my small farm—yield predictions are spot-on!"</p>
+                    <span>Mahadev Singh, Small Farmer</span>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <img src="public/images/farmer2.jpg" alt="Farmer Avatar">
+                <div>
+                    <p>"Weather integration saved my crops from a sudden drought. Amazing!"</p>
+                    <span>Subhash Palekar, Commercial Farmer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced FAQ Section -->
+    <section class="faq container">
+        <h2>Unveiling the Power of Crop Prediction</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>How does weather turn farming into a superpower?</h3>
+                <p>Imagine knowing exactly how rain, sun, or wind will shape your harvest! We blend real-time weather
+                    data—temperature, rainfall, humidity—with cutting-edge analytics to supercharge your yield
+                    predictions, giving you the edge to plan like a pro.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Which crops can I master with this tool?</h3>
+                <p>From golden wheat fields to lush rice paddies, we’ve got you covered! Predict yields for staples like
+                    corn, soybeans, and more—just input your crop and region, and watch tailored insights bloom before
+                    your eyes.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I really trust these predictions?</h3>
+                <p>Think of it like a crystal ball backed by science! Our accuracy shines when you feed us rich
+                    data—soil secrets, weather whispers, and your farming flair. Real-world results prove our models are
+                    spot-on.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is this magic just for big farms?</h3>
+                <p>Not at all! Whether you’re tending a cozy family plot or a sprawling estate, our platform scales to
+                    fit your fields. Precision farming isn’t just for the giants—it’s your ticket to thrive, no matter
+                    the size.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How fresh is the weather intel?</h3>
+                <p>Fresh as the morning dew! We pull daily updates from top meteorological sources, delivering real-time
+                    weather vibes straight to your predictions—so you’re always in sync with nature’s rhythm.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do I need to be a tech wizard to crack this?</h3>
+                <p>Nope, no tech spells required! Our platform’s as easy as a walk in the fields—intuitive design and
+                    clear guides mean every farmer, from newbie to veteran, can unlock its power with zero fuss.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What happens when the skies throw a curveball?</h3>
+                <p>We’ve got your back! When storms brew or droughts loom, our system pivots fast, tweaking predictions
+                    with the latest weather twists—so you’re ready to adapt before the first drop falls.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How does this make my farm a green legend?</h3>
+                <p>Picture slashing waste and boosting bounty! By nailing yield forecasts, you’ll use water,
+                    fertilizers, and energy just right—turning your farm into a sustainability superstar while keeping
+                    the planet smiling.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (No CSS applied here) -->
     <?php include 'partials/footer.php'; ?>
 
-    <!-- Slider JavaScript -->
+    <!-- JavaScript for Interactivity -->
     <script>
+    // Slider with Dots
     const slider = document.getElementById('slider');
     const prevBtn = document.getElementById('prev');
     const nextBtn = document.getElementById('next');
+    const dotsContainer = document.getElementById('dots');
     const slides = slider.children;
     let currentIndex = 0;
 
-    function updateSlider() {
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-        // Remove active class from all slides
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].classList.remove('active');
-            slides[i].querySelector('img').classList.remove('active');
-            slides[i].querySelector('h2').parentElement.classList.remove('active');
-        }
-
-        // Add active class to current slide
-        slides[currentIndex].classList.add('active');
-        slides[currentIndex].querySelector('img').classList.add('active');
-        slides[currentIndex].querySelector('h2').parentElement.classList.add('active');
+    for (let i = 0; i < slides.length; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        dot.addEventListener('click', () => {
+            currentIndex = i;
+            updateSlider();
+        });
+        dotsContainer.appendChild(dot);
     }
 
-    // Initial setup
+    const dots = dotsContainer.children;
+
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove('active');
+            dots[i].classList.remove('active');
+        }
+        slides[currentIndex].classList.add('active');
+        dots[currentIndex].classList.add('active');
+    }
+
     updateSlider();
 
     prevBtn.addEventListener('click', () => {
@@ -162,11 +246,55 @@ session_start();
         updateSlider();
     });
 
-    // Auto-slide every 5 seconds
     setInterval(() => {
         currentIndex = currentIndex < slides.length - 1 ? currentIndex + 1 : 0;
         updateSlider();
     }, 5000);
+
+    // Stats Counter Animation
+    const stats = document.querySelectorAll('.stat-item h3');
+    let hasAnimated = false;
+
+    function animateStats() {
+        if (hasAnimated) return;
+        stats.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-count'));
+            let count = 0;
+            const increment = target / 100;
+            const updateCount = () => {
+                count += increment;
+                if (count >= target) {
+                    stat.textContent = target.toLocaleString() + (stat.textContent.includes('Acres') ?
+                        ' Acres' : '+');
+                } else {
+                    stat.textContent = Math.ceil(count).toLocaleString() + (stat.textContent.includes(
+                        'Acres') ? ' Acres' : '+');
+                    requestAnimationFrame(updateCount);
+                }
+            };
+            updateCount();
+        });
+        hasAnimated = true;
+    }
+
+    const statsSection = document.querySelector('.stats');
+    window.addEventListener('scroll', () => {
+        const rect = statsSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            animateStats();
+        }
+    });
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const header = item.querySelector('h3');
+        header.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            faqItems.forEach(i => i.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
+        });
+    });
     </script>
 </body>
 

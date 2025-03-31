@@ -9,7 +9,7 @@
     /* Base styling with professional typography */
     body {
         font-family: 'Roboto', 'Arial', sans-serif;
-        background: url('public/images/loginimage.jpg') no-repeat center center fixed;
+        background: url('public/images/predictbackground.jpg') no-repeat center center fixed;
         background-size: cover;
         color: #2d3748;
         line-height: 1.6;
@@ -672,3 +672,7 @@
             max-width: 100%;
         }
     }
+#special{
+margin-bottom:50px;
+font-size: 24px; /* Increase this value to make text bigger */
+};
