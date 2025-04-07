@@ -44,7 +44,7 @@ Before running the project, ensure you have the following installed:
 
 Here’s a sneak peek of the platform in action:
 
-![Crop_Yield_Prediction Preview](Screenshot_1.png)
+![Crop_Yield_Prediction Preview](Screenshot_2.png)
 
 ## 🚀 Installation Guide
 Follow these steps to set up the project on your local machine:
