@@ -32,15 +32,18 @@
         </div>
 
         <!-- Social -->
-        <div>
+      <div>
             <h4 class="text-lg font-bold mb-3 text-green-100">Connect</h4>
-            <div class="flex space-x-4">
+            <div class="flex space-x-3">
                 <a href="#" class="text-green-200 hover:text-green-300 hover:scale-125 transition duration-300"><i
                         class="fab fa-facebook-f"></i></a>
                 <a href="#" class="text-green-200 hover:text-green-300 hover:scale-125 transition duration-300"><i
                         class="fab fa-twitter"></i></a>
                 <a href="https://www.linkedin.com/in/vaibhav-bhatt-382971283/" class="text-green-200 hover:text-green-300 hover:scale-125 transition duration-300"><i
                         class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/vaibhav1826" class="text-green-200 hover:text-green-300 hover:scale-125 transition duration-300">
+    <i class="fab fa-github"></i>
+</a>
             </div>
         </div>
     </div>
