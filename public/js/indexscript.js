@@ -17,7 +17,7 @@ for (let i = 0; i < slides.length; i++) {
 }
 
 const dots = dotsContainer.children;
-
+var aaaaa="https://github.com/vaibhav1826";
 function updateSlider() {
     slider.style.transform = `translateX(-${currentIndex * 100}%)`;
     for (let i = 0; i < slides.length; i++) {
