@@ -47,6 +47,6 @@
 
     <!-- Bottom -->
     <div class="border-t border-teal-400 mt-6 pt-4 text-center bg-teal-700 bg-opacity-20">
-        <p class="text-xs">© 2025 Crop Yield Portal. All rights reserved.</p>
+        <p class="text-xs">© 2025 <a href="https://github.com/vaibhav1826">Vaibhavbhatt</a>. All rights reserved.</p>
     </div>
 </footer>
