@@ -174,7 +174,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="social-links">
                     <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f text-xl"></i></a>
                     <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter text-xl"></i></a>
-                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in text-xl"></i></a>
+                    <a href="https://www.linkedin.com/in/vaibhav-bhatt-382971283/" target="_blank"><i class="fab fa-linkedin-in text-xl"></i></a>
                     <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram text-xl"></i></a>
                 </div>
             </div>
